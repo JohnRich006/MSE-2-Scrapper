@@ -37,11 +37,11 @@ def mtgArtScrapper(card):
         print("No Button to click")
 
     # Pause
-    # input("When ready press Enter\n\n")
+    input("When ready press Enter\n\n")
 
     print("Downloading Image from MTG Art")
     try:
-        imageTag = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/div[1]/div/img")))
+        imageTag = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/div[1]/div/img")))
         src = imageTag.get_attribute('src')
         print(src)
 
